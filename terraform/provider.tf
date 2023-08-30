@@ -9,7 +9,7 @@ terraform {
       version = "~> 4.55"
     }
   }
-  
+
 }
 
 provider "aws" {
