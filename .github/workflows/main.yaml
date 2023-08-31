@@ -1,6 +1,9 @@
 name: CP1 Uriel
 
-on: [push]
+on:
+  push:
+    branches:
+    - develop
 
 jobs:
 
