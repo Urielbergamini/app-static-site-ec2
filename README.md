@@ -113,3 +113,31 @@ O Amazon EC2 pode ser utilizado para hospedar quaisquer aplicações, tais como 
     > **Note**: Caso esteja utilizando um ambiente pago, não esqueça de destruir os recursos criados para evitar custos indesejados.
  
     ![AWS EC2 static site](/images/EC2_static_site.png)
+
+```
+app-static-site-ec2
+├─ app
+│  ├─ error.html
+│  └─ index.html
+├─ diagram
+│  ├─ .$architecture.drawio.bkp
+│  └─ architecture.drawio
+├─ images
+│  ├─ architecture.jpg
+│  ├─ EC2_list.png
+│  └─ EC2_static_site.png
+├─ LICENSE
+├─ README.md
+└─ terraform
+   ├─ modules
+   │  ├─ compute
+   │  │  └─ compute.tf
+   │  └─ rede
+   │     ├─ output.tf
+   │     ├─ rede.tf
+   │     └─ vars.tf
+   ├─ provider.tf
+   └─ scripts
+      └─ user_data.sh
+
+```
