@@ -6,7 +6,7 @@ data "template_file" "user_data" {
 
 resource "aws_instance" "instance" {
   ami           = "ami-02e136e904f3da870"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   subnet_id              = var.subnet_id
   vpc_security_group_ids = [var.security_group_id]
