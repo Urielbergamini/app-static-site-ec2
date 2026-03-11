@@ -5,9 +5,11 @@ data "template_file" "user_data" {
 }
 
 resource "aws_instance" "instance" {
-    ami                    = "ami-02e136e904f3da870"
-    instance_type          = "t2.micro"
-    subnet_id              = aws_subnet.sn_public.id
-    vpc_security_group_ids = [aws_security_group.sg_public.id]
-    user_data              = "${base64encode(data.template_file.user_data.rendered)}"
+  ami           = "ami-02e136e904f3da870"
+  instance_type = "t2.micro"
+
+  subnet_id              = var.subnet_id
+  vpc_security_group_ids = [var.security_group_id]
+
+  user_data = base64encode(data.template_file.user_data.rendered)
 }
